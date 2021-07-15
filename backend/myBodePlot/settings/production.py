@@ -21,7 +21,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
-MIDDLEWARE+='whitenoise.middleware.WhiteNoiseMiddleware'
+MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
