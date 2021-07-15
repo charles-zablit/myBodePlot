@@ -1,0 +1,19 @@
+{
+  "name": "mybodeplot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "frontend/src/App.tsx",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "watch": "cd frontend && npm run watch",
+    "test": "cd frontend && npm run test",
+    "install": "cd frontend && npm install"
+  },
+  "author": "charles-zablit",
+  "license": "MIT",
+  "engines": {
+    "node": "14.17.3",
+    "npm": "6.14.9"
+  }
+}
