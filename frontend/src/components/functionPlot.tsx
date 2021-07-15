@@ -12,6 +12,7 @@ export const FunctionPlot = React.memo(
     const rootE2 = useRef(null);
 
     useEffect(() => {
+      
       try {
         let transfert = fn
         let optionsGain = {
@@ -29,7 +30,10 @@ export const FunctionPlot = React.memo(
           grid: true,
           data: [
             {
-              fn: `20*log(abs(${fn || 1}))`
+              // Il y a un bug dans le code qui multiplie les valeurs
+              // de cette fonction par 2. On divise donc par 2 
+              // (i.e 20 devient 10 ici).
+              fn: `10*log(abs(${fn || 1}))`
             },
           ],
         };
@@ -56,7 +60,6 @@ export const FunctionPlot = React.memo(
             },
           ],
         };
-
         var gain = functionPlot(
           Object.assign({}, optionsGain, { target: rootE1.current })
         );
