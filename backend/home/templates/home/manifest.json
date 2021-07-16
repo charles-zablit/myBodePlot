@@ -18,14 +18,14 @@
       "sizes": "128x128",
       "type": "image/png"
     },
-		{
-      "src": "{% static 'img/MyBodePlot256.png' %}",
-      "sizes": "256x256",
+    {
+      "src": "{% static 'img/MyBodePlot180.png' %}",
+      "sizes": "180x180",
       "type": "image/png"
     },
-		{
-      "src": "{% static 'img/MyBodePlot512.png' %}",
-      "sizes": "512x512",
+    {
+      "src": "{% static 'img/MyBodePlot192.png' %}",
+      "sizes": "192x192",
       "type": "image/png"
     }
   ],
