@@ -3,6 +3,7 @@ var webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 var BundleTracker = require("webpack-bundle-tracker");
+const ESLintPlugin = require('eslint-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 module.exports = merge(common, {
@@ -21,6 +22,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
+    new ESLintPlugin(options),
     new BundleTracker({
       path: __dirname,
       filename: "webpack-stats.json",
