@@ -22,7 +22,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new ESLintPlugin(options),
+    new ESLintPlugin(),
     new BundleTracker({
       path: __dirname,
       filename: "webpack-stats.json",
