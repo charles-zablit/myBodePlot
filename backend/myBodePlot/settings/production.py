@@ -55,6 +55,4 @@ LOGGING = {
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-#MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 django_heroku.settings(locals(), staticfiles=False,logging=False)
