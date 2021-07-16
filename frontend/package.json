@@ -1,12 +1,13 @@
 {
   "name": "mybodeplot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Une application web pour tracer des diagrammes de Bode.",
   "main": "App.tsx",
   "scripts": {
     "dev": "webpack  --config webpack.config/webpack.dev.js",
     "build": "npm install && webpack --config webpack.config/webpack.prod.js",
     "watch": "npm run dev --watch",
+    "analyse": "./node_modules/.bin/webpack --config webpack.config/webpack.analyser.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -17,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/charles-zablit/myBodePlot"
   },
-  "author": "",
+  "author": "Charles Zablit",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.14.0",
@@ -47,9 +48,10 @@
     "react-bootstrap": "^1.5.2",
     "react-chartjs-2": "^3.0.3",
     "style-loader": "^3.1.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "terser-webpack-plugin": "^5.1.4",
     "webpack": "^5.44.0",
     "webpack-bundle-tracker": "^0.4.3",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.6.0"
   }
 }

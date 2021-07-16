@@ -1,9 +1,9 @@
 ﻿import React, { useEffect, useRef } from "react";
 import functionPlot from "function-plot";
-import * as mathjs from "mathjs";
+import { pi, compile, complex } from "mathjs";
 
 function rad2deg(angle:number): number {
-  return angle / mathjs.pi * 180;
+  return angle / pi * 180;
 }
 
 export const FunctionPlot = React.memo(
@@ -54,7 +54,7 @@ export const FunctionPlot = React.memo(
           data: [
             {
               fn: ((scope)=>{
-                const phase = rad2deg(mathjs.compile(transfert).evaluate({x: mathjs.complex(0, scope.x.lo)}).toPolar()["phi"]);
+                const phase = rad2deg(compile(transfert).evaluate({x: complex(0, scope.x.lo)}).toPolar()["phi"]);
                 return ({lo: phase, hi: phase});
               })
             },

@@ -1,7 +1,7 @@
 ﻿import React, { useState } from "react";
 import { render } from "react-dom";
-import { Button } from "react-bootstrap";
-import * as mathjs from "mathjs";
+import  Button  from "react-bootstrap/Button";
+import { parse } from "mathjs";
 import Tex2SVG from "react-hook-mathjax";
 import { FunctionPlot } from "./components/functionPlot.tsx";
 
@@ -41,7 +41,7 @@ function App(props): JSX.Element {
         className="input"
         onSubmit={(event) => {
           event.preventDefault();
-          const expression = mathjs.parse(event.target.expression.value);
+          const expression = parse(event.target.expression.value);
           setParsedExpression(expression.toTex());
           setTransfert(expression.toString());
         }}
