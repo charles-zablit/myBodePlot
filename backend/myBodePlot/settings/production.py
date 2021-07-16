@@ -1,10 +1,9 @@
 from .base import *
 import django_heroku
-import dotenv
 import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['my-bode-plot.herokuapp.com']
 
@@ -21,7 +20,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
-MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
+#MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
