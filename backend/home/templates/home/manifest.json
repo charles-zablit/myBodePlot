@@ -1,0 +1,33 @@
+﻿{% load static %}
+{
+  "name": "My Bode Plot",
+  "short_name": "MyBodePlot",
+  "theme_color": "#cbc6c0",
+  "background_color": "#181a1b",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "{% static 'img/MyBodePlot16.png' %}",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "{% static 'img/MyBodePlot128.png' %}",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+		{
+      "src": "{% static 'img/MyBodePlot256.png' %}",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+		{
+      "src": "{% static 'img/MyBodePlot512.png' %}",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}

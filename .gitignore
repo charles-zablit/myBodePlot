@@ -139,3 +139,5 @@ backend/static/upload/*
 *.ttf
 *.woff
 *.woff2
+
+*.LICENSE.txt
