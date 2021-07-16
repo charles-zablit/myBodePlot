@@ -58,7 +58,7 @@ function App(props): JSX.Element {
         </Button>
       </form>
       <ExpressionRender expression={parsedExpression} />
-      <div style={{ height: "500px" }}>
+      <div>
         {transfert && <FunctionPlot fn={transfert} />}
       </div>
     </>

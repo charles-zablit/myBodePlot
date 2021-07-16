@@ -98,3 +98,12 @@ a:hover {
 a:hover > svg {
   fill: #8080ff;
 }
+
+footer {
+  background-color: #1c1d1f;
+  width: 100%;
+}
+
+a {
+  color: rgb(203, 198, 192);
+}

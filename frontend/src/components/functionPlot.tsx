@@ -79,7 +79,7 @@ export const FunctionPlot = React.memo(
     return (
       <div>
         <div ref={rootE1} style={{marginBottom: "1rem"}}/>
-        <div ref={rootE2} />
+        <div ref={rootE2} style={{marginBottom: "1rem"}}/>
       </div>
     );
   },
